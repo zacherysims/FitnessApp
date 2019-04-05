@@ -4,5 +4,5 @@
     You gonna cry?
 @endsection
 @section('content')
-<h1>Click a Navbar link maybe?</h1>
+<h1>Add some equipment maybe?</h1>
 @endsection
