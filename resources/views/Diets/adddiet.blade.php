@@ -3,13 +3,16 @@
 @section('title')
     You gonna cry?
 @endsection
+@section('tab')
+Add a Diet
+@endsection
 @section('content')
 <h1>Add a diet maybe?</h1>
 <form action="/action_page.php">
   Name:<br>
   <input type="text" name="Name"><br><br>
   Length(Days):<br>
-  <input type="int" name="Length"><br><br>
+  <input type="number" name="Length" min = "1" max = "365" ><br><br>
   Difficulty:<br>
   <select>
   <option value="" selected disabled hidden></option>
@@ -24,6 +27,8 @@
   <option value="Gain Weight">Gain Weight</option>
   <option value="Maintain Weight">Maintain Weight</option>
 </select><br><br>
+Comment:<br>
+  <textarea name="Comment"></textarea><br><br>
 <input type="submit" value="Add Diet">
 </form>
 @endsection

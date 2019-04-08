@@ -3,15 +3,16 @@
 @section('title')
     You gonna cry?
 @endsection
+
 @section('tab')
-Add a Workout
+Add an Exercise
 @endsection
-@section('tab')
-Add a Workout
-@endsection
+
 @section('content')
-<h1>Add a workout maybe?</h1>
+<h1>Add an exercise maybe?</h1>
 <form action="/action_page.php">
+    Name:<br>
+  <input type="text" name="Name"><br><br>
   Date:<br>
   <input type="text" name="input" placeholder="YYYY-MM-DD" required 
     pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" 
@@ -30,11 +31,8 @@ Type:<br>
   <option value="Cardio">Cardio</option>
   <option value="Other">Other</option>
 </select><br><br>
-  Number of Exercises:<br>
-  <input type="number" name="Number of Exercises" min="1" max ="50"><br><br>
-  Length:<br>
-  <input type="number" name="Length_hours" min = "1" max = "10" placeholder = "Hours">
-  <input type="number" name="Length_minutes" min = "1" max = "59" placeholder = "Minutes"><br><br>
+  Number of Sets:<br>
+  <input type="number" name="Number of Sets" min="1" max ="50"><br><br>
   Comment:<br>
   <textarea name="Comment"></textarea><br><br>
 <input type="submit" value="Add Workout">

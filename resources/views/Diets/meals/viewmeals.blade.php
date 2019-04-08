@@ -1,5 +1,7 @@
 @extends('masterlayout')
-
+@section('tab')
+View Meals
+@endsection
 @section('title')
     You gonna cry?
 @endsection

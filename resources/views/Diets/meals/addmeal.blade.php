@@ -3,6 +3,9 @@
 @section('title')
     You gonna cry?
 @endsection
+@section('tab')
+Add a Meal
+@endsection
 @section('content')
 <h1>Add a meal maybe?</h1>
 

@@ -47,6 +47,10 @@ Route::get('/addroutine', function () {
     return view('Routines/addroutine');
 });
 
+Route::get('/addexercise', function () {
+    return view('workouts/addexercise');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
