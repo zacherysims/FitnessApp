@@ -1,7 +1,7 @@
 @extends('masterlayout')
 
 @section('title')
-    Yout gonna cry?
+    You gonna cry?
 @endsection
 @section('content')
 <h1>View a workout maybe?</h1>

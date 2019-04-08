@@ -88,5 +88,6 @@
                 @yield('content')
             </div>
         </div>
+        <div id="copyright text-right">Zachary Sims, Paolo Majerano, Jacob Parente</div>
     </body>
 </html>
