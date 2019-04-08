@@ -46,3 +46,7 @@ Route::get('/addworkout', function () {
 Route::get('/addequipment', function () {
     return view('equipment/addequipment');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
