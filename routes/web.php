@@ -23,10 +23,6 @@ Route::get('/viewworkouts', function () {
     return view('workouts/viewworkouts');
 });
 
-Route::get('/viewequipment', function () {
-    return view('equipment/viewequipment');
-});
-
 Route::get('/viewmeals', function () {
     return view('Diets/meals/viewmeals');
 });
@@ -43,10 +39,15 @@ Route::get('/addworkout', function () {
     return view('workouts/addworkout');
 });
 
-Route::get('/addequipment', function () {
-    return view('equipment/addequipment');
+Route::get('/viewroutines', function () {
+    return view('Routines/viewroutines');
+});
+
+Route::get('/addroutine', function () {
+    return view('Routines/addroutine');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

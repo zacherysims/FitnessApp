@@ -8,4 +8,6 @@
 Maybe shit and <a href="adddiet">add a diet?</a>
 <br>
 Maybe even shit and <a href="viewmeals">view your meals?</a>
+<br>
+Maybe <a href="addmeal">add a meal</a> and cum?
 @endsection

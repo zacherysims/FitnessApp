@@ -4,7 +4,7 @@
     You gonna cry?
 @endsection
 @section('content')
-<h1>Add a diet maybe?</h1>
+<h1>Add a routine maybe?</h1>
 <form action="/action_page.php">
   Name:<br>
   <input type="text" name="Name"><br><br>
@@ -24,6 +24,8 @@
   <option value="Gain Weight">Gain Weight</option>
   <option value="Maintain Weight">Maintain Weight</option>
 </select><br><br>
-<input type="submit" value="Add Diet">
+Split(Days per week):<br>
+<input type="number" name="Split" min = "1" max="7"><br><br>
+<input type="submit" value="Add Routine">
 </form>
 @endsection

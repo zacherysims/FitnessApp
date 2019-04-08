@@ -4,6 +4,6 @@
     You gonna cry?
 @endsection
 @section('content')
-<h1>View some equipment maybe?</h1>
-Maybe shit and <a href="addequipment">add some equipment?</a>
+<h1>View a routine maybe?</h1>
+Maybe shit and <a href="addroutine">add a routine?</a>
 @endsection

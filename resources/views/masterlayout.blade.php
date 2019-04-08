@@ -66,7 +66,7 @@
                 <a href="/">Home</a>
                 <a href="/viewdiets">Diets</a>
                 <a href="/viewworkouts">Workouts</a>
-                <a href="/viewequipment">Equipment</a>
+                <a href="/viewroutines">Routines</a>
             </div>
             @if (Route::has('login'))
                 <div class="flex-center position-ref top-right links">
@@ -88,6 +88,5 @@
                 @yield('content')
             </div>
         </div>
-        <div id="copyright text-right">Zachary Sims, Paolo Majerano, Jacob Parente</div>
     </body>
 </html>
