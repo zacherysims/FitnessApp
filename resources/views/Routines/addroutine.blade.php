@@ -8,7 +8,7 @@ Add a Routine
 @endsection
 @section('content')
 <h1>Add a routine maybe?</h1>
-<form action="/action_page.php">
+<form action="addroutine">
   Name:<br>
   <input type="text" name="Name"><br><br>
   Length(Days):<br>
