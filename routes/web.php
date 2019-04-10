@@ -27,6 +27,10 @@ Route::get('/adddiet', function () {
     return view('Diets/adddiet');
 });
 
+Route::get('/test', function () {
+    return view('Diets/test');
+});
+
 Route::get('/addworkout', function () {
     return view('workouts/addworkout');
 });

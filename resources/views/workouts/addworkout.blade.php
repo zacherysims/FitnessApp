@@ -11,7 +11,7 @@ Add a Workout
 @endsection
 @section('content')
 <h1>Add a workout maybe?</h1>
-<form action="/action_page.php">
+<form action="addworkout">
   Date:<br>
   <input type="text" name="input" placeholder="YYYY-MM-DD" required 
     pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" 

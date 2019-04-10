@@ -10,7 +10,7 @@ Add an Exercise
 
 @section('content')
 <h1>Add an exercise maybe?</h1>
-<form action="/action_page.php">
+<form action="addexercise">
     Name:<br>
   <input type="text" name="Name"><br><br>
   Date:<br>
@@ -19,7 +19,7 @@ Add an Exercise
     title="Enter a date in this format YYYY-MM-DD"/><br><br>
   Difficulty:<br>
   <select>
-  <option value="" selected disabled hidden></option>
+  <option value="" selected disabled hidden>< /option>
   <option value="Beginner">Beginner</option>
   <option value="Intermediate">Intermediate</option>
   <option value="Advanced">Advanced</option>
