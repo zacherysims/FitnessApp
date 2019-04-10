@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <title>@yield('title') | @yield('tab')</title>
+        <title> Fitness App | @yield('tab')</title>
         <!-- Styles -->
         <style>
             html, body {

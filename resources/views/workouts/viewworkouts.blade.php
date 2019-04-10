@@ -1,13 +1,15 @@
 @extends('masterlayout')
 
 @section('title')
-    You gonna cry?
+    Workouts
 @endsection
+
 @section('tab')
 View Workouts
 @endsection
+
 @section('content')
-<h1>View a workout maybe?</h1>
-Maybe shit and <a href="addworkout">add a workout?</a><br>
-Maybe <a href="addexercise">add an exercise</a> and cum?
+<h1>View Workouts</h1>
+<a href="addworkout">Add a Workout</a><br>
+<a href="addexercise">Add an Exercise</a>
 @endsection

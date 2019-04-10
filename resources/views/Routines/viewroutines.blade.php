@@ -1,12 +1,12 @@
 @extends('masterlayout')
 
 @section('title')
-    You gonna cry?
+    Routines
 @endsection
 @section('tab')
 View Routines
 @endsection
 @section('content')
-<h1>View a routine maybe?</h1>
-Maybe shit and <a href="addroutine">add a routine?</a>
+<h1>View Routines</h1>
+<a href="addroutine">Add a Routine</a>
 @endsection

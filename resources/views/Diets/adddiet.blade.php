@@ -1,13 +1,13 @@
 @extends('masterlayout')
 @section('title')
-    You gonna cry?
+    Diets
 @endsection
 @section('tab')
 Add a Diet
 @endsection
 @section('content')
 
-<h1>Add a diet maybe?</h1>
+<h1>Add a Diet</h1>
 <form action="adddiet">
   Name:<br>
   <input type="text" name="Name"><br><br>
@@ -31,10 +31,4 @@ Comment:<br>
   <textarea name="Comment"></textarea><br><br>
 <input type="submit" value="Add Diet">
 </form>
-
-$query = DB::insert('insert into diet(diet_id, diet_rou_id, diet_username,
-          diet_difficulty, diet_length, diet_goal, diet_name) values (?, ?, ?, ?, ?, ?, ?)', 
-          ['1234', '1234', 'username',
-          htmlspecialchars($_POST['Difficulty'], htmlspecialchars($_POST['Goal']), 
-          htmlspecialchars($_POST['Name'])]);
 @endsection

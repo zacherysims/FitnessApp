@@ -1,11 +1,16 @@
 @extends('masterlayout')
 
 @section('title')
-    You gonna cry?
+    Home
 @endsection
 @section('tab')
 Home
 @endsection
 @section('content')
-<h1>Click a Navbar link maybe?</h1>
+<h1>Stats</h1>
+         Height:  <br>
+         Age:  <br>
+         Weight:  <br>
+         Training Goal:  <br>
+         Goal Weight:  <br>
 @endsection
