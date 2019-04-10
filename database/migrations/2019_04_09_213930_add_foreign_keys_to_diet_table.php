@@ -14,8 +14,8 @@ class AddForeignKeysToDietTable extends Migration {
 	{
 		Schema::table('diet', function(Blueprint $table)
 		{
-			$table->foreign('diet_username', 'username_fkey')->references('username')->on('personnel')->onUpdate('RESTRICT')->onDelete('CASCADE');
 			$table->foreign('diet_rou_id', 'rou_id_fkey')->references('rou_id')->on('rou')->onUpdate('RESTRICT')->onDelete('CASCADE');
+			$table->foreign('diet_username', 'username_fkey')->references('username')->on('personnel')->onUpdate('RESTRICT')->onDelete('CASCADE');
 		});
 	}
 
@@ -29,8 +29,8 @@ class AddForeignKeysToDietTable extends Migration {
 	{
 		Schema::table('diet', function(Blueprint $table)
 		{
-			$table->dropForeign('username_fkey');
 			$table->dropForeign('rou_id_fkey');
+			$table->dropForeign('username_fkey');
 		});
 	}
 

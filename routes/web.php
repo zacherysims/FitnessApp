@@ -23,14 +23,6 @@ Route::get('/viewworkouts', function () {
     return view('workouts/viewworkouts');
 });
 
-Route::get('/viewmeals', function () {
-    return view('Diets/meals/viewmeals');
-});
-
-Route::get('/addmeal', function () {
-    return view('Diets/meals/addmeal');
-});
-
 Route::get('/adddiet', function () {
     return view('Diets/adddiet');
 });

@@ -27,7 +27,6 @@ class CreateWorkoutTable extends Migration {
 		});
 	}
 
-
 	/**
 	 * Reverse the migrations.
 	 *
