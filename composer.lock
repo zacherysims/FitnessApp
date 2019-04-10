@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c55f89f96b0a3572e3580c21a11cd6f1",
+    "content-hash": "e6c982a42abae28944cda4c8619aa55e",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1276,6 +1276,55 @@
                 "type"
             ],
             "time": "2015-07-25T16:39:46+00:00"
+        },
+        {
+            "name": "pmatseykanets/laravel-sql-migrations",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pmatseykanets/laravel-sql-migrations.git",
+                "reference": "cf7254e230b7d98b7035eb4f5f45f6854589acc5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pmatseykanets/laravel-sql-migrations/zipball/cf7254e230b7d98b7035eb4f5f45f6854589acc5",
+                "reference": "cf7254e230b7d98b7035eb4f5f45f6854589acc5",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.5",
+                "php": ">=7.1.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "SqlMigrations\\SqlMigrationsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SqlMigrations\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Matseykanets",
+                    "email": "pmatseykanets@gmail.com"
+                }
+            ],
+            "description": "Raw SQL migrations for Laravel",
+            "homepage": "https://github.com/pmatseykanets/laravel-scout-postgres",
+            "time": "2018-10-29T22:03:08+00:00"
         },
         {
             "name": "psr/container",

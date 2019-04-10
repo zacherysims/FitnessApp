@@ -32,7 +32,7 @@
             }
 
             .top-right {
-                position: absolute;
+                position:absolute;
                 right: 10px;
                 top: 18px;
             }
@@ -55,6 +55,16 @@
                 text-transform: uppercase;
             }
 
+            .links > a {
+                color: #636b6f;
+                padding: 5px;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -69,12 +79,11 @@
                 <a href="/viewroutines">Routines</a>
             </div>
             @if (Route::has('login'))
-                <div class="flex-center position-ref top-right links">
+                <div class="position-ref top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
-
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
                         @endif
