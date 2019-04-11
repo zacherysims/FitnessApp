@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
 
-class personellcontroller extends Controller
+class exercisecontroller extends Controller
 {
     /**
      * Create a new controller instance.
@@ -30,11 +30,10 @@ class personellcontroller extends Controller
 
     public function fill(){
         $username = \Auth::user()->name;
-        $weight = request('weight');
-        $goalweight = request('goalweight');
-        $traininggoal = request('goal');
-        $height = request('height');
-        $age = request("age");
+        $name = request('name');
+        $type = request('type');
+        $date = request('date');
+        $difficulty
 
         $currentuser = DB::select('select * from personnel where username = ?', [$username]);
         foreach($currentuser as $observeduser){
