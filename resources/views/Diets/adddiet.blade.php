@@ -10,22 +10,20 @@ Add a Diet
 <h1>Add a Diet</h1>
 <form action="fill_adddiet">
   Name:<br>
-  <input type="text" name="name"><br><br>
+  <input type="text" name="name" required><br><br>
   Length(Days):<br>
-  <input type="number" name="length" min = "1" max = "365" ><br><br>
+  <input type="number" name="length" min = "1" max = "365" required><br><br>
   Difficulty:<br>
-  <select required>
-  <option value="" selected disabled hidden></option>
-  <option name="difficulty" value="Beginner">Beginner</option>
-  <option name="difficulty" value="Intermediate">Intermediate</option>
-  <option name="difficulty" value="Advanced">Advanced</option>
+  <select name="dietdifficulty" required>
+  <option selected  value="Beginner">Beginner</option>
+  <option value="Intermediate">Intermediate</option>
+  <option value="Advanced">Advanced</option>
 </select><br><br>
   Goal:<br>
-  <select required>
-  <option value="" selected disabled hidden></option>
-  <option name="goal" value="Lose Weight">Lose Weight</option>
-  <option name="goal" value="Gain Weight">Gain Weight</option>
-  <option name="goal" value="Maintain Weight">Maintain Weight</option>
+  <select name="dietgoal" required>
+  <option selected value="Lose Weight">Lose Weight</option>
+  <option value="Gain Weight">Gain Weight</option>
+  <option value="Maintain Weight">Maintain Weight</option>
 </select><br><br>
 Comment:<br>
 <input type="submit" value="Add Diet">
