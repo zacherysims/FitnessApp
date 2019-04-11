@@ -21,16 +21,23 @@ class dietcontroller extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
     public function index()
     {
-        $diets = DB::select('select * from diet where diet_username = ?', Auth::user()-id);
-
-        return view('viewdiets.index', ['diets' => $diets]);
-
+        return view('viewdiets');
     }
 
-    public function adddiet(){
-        DB::insert('insert into diet (diet_username, diet_difficulty, diet_length, diet_goal, diet_name) values (?, ?, ?, ?, ?)',
-        [\Auth::user()->id, request('difficulty'), request('length'), request('goal'), request('name')]);
+    public function fill(){
+        $name = request('name');
+        $length = request('length');
+        $difficulty = request('difficulty');
+        $goal = request('goal');
+
+        $currentusername = DB::select('select password from users where password = ?', [\Auth::user()->password]);
+
+        DB::insert('insert into diet(diet_username, diet_difficulty, diet_length, diet_goal, diet_name) values(?, ?, ?, ?, ?)',
+        [$currentusername, $difficulty, $length, $goal, $name]);
+        return view('viewdiets');
+        
     }
 }
