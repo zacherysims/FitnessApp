@@ -77,6 +77,8 @@ Route::get('/fill_adddiet', 'dietcontroller@fill');
 
 Route::post('/fill_addworkout', 'workoutcontroller@fill');
 
+Route::post('/fill_addroutine', 'routinecontroller@fill');
+
 Route::get('/filloutform', function () {
     return view('filloutform');
 });
