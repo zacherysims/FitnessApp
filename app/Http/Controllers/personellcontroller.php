@@ -29,7 +29,7 @@ class personellcontroller extends Controller
     }
 
     public function fill(){
-        $username = request('username');
+        $username = \Auth::user()->name;
         $weight = request('weight');
         $goalweight = request('goalweight');
         $traininggoal = request('goal');

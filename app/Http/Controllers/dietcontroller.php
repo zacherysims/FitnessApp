@@ -30,14 +30,14 @@ class dietcontroller extends Controller
     public function fill(){
         $name = request('name');
         $length = request('length');
-        $difficulty = request('difficulty');
-        $goal = request('goal');
+        $difficulty = request('dietdifficulty');
+        $goal = request('dietgoal');
 
-        $currentusername = DB::select('select password from users where password = ?', [\Auth::user()->password]);
+        $currentusername = \Auth::user()->name;
 
-        DB::insert('insert into diet(diet_username, diet_difficulty, diet_length, diet_goal, diet_name) values(?, ?, ?, ?, ?)',
+        DB::insert('insert into diet (diet_username, diet_difficulty, diet_length, diet_goal, diet_name) values(?, ?, ?, ?, ?)',
         [$currentusername, $difficulty, $length, $goal, $name]);
-        return view('viewdiets');
+        return view('diets/viewdiets');
         
     }
 }

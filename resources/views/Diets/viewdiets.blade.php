@@ -9,7 +9,7 @@ View Diets
 @endsection
 @section('content')
 <h1>View Diets</h1>
-<a href="fill_adddiet">Add a Diet</a>
+<a href="adddiet">Add a Diet</a>
 
 @if(isset($diets))
 @foreach($diets as $diet)

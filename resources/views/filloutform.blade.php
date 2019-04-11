@@ -9,8 +9,6 @@ Add a Diet
 
 <h1>Please fill out the information below</h1>
 <form action="/formfill">
-  Username:<br>
-  <input type="text" name="username" required><br><br>
   Weight:<br>
   <input type="number" name="weight" min = "1" max = "999" required><br><br>
   Goal Weight:<br>
