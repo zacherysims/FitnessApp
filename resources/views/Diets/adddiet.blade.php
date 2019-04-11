@@ -14,14 +14,14 @@ Add a Diet
   Length(Days):<br>
   <input type="number" name="length" min = "1" max = "365" ><br><br>
   Difficulty:<br>
-  <select>
+  <select required>
   <option value="" selected disabled hidden></option>
   <option name="difficulty" value="Beginner">Beginner</option>
   <option name="difficulty" value="Intermediate">Intermediate</option>
   <option name="difficulty" value="Advanced">Advanced</option>
 </select><br><br>
   Goal:<br>
-  <select>
+  <select required>
   <option value="" selected disabled hidden></option>
   <option name="goal" value="Lose Weight">Lose Weight</option>
   <option name="goal" value="Gain Weight">Gain Weight</option>

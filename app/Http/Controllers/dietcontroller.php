@@ -33,11 +33,13 @@ class dietcontroller extends Controller
         $difficulty = request('difficulty');
         $goal = request('goal');
 
-        $currentusername = DB::select('select password from users where password = ?', [\Auth::user()->password]);
+        $currentpassword = \Auth::user()->password;
 
+        $currentusername = DB::select('select password from users where password = ?', [$currentpassword]);
+    {
         DB::insert('insert into diet(diet_username, diet_difficulty, diet_length, diet_goal, diet_name) values(?, ?, ?, ?, ?)',
         [$currentusername, $difficulty, $length, $goal, $name]);
-        return view('viewdiets');
-        
+        return view('Diets/viewdiets');
+    }   
     }
 }
