@@ -32,19 +32,27 @@ class workoutcontroller extends Controller
     public function fill(){
         $date = request('date');
         $difficulty = request('difficulty');
-        $type = request('type');
+        $type = request('style');
         $numex = request('numex');
         $hours = request('length_hours');
         $minutes = request('length_min');
         $length = (int)$hours * 60 + (int)$minutes;
-        $comment = request("comment"); 
-
+        $comment = request('comment');
+        $routinename = strtok(request('routinename'));
         $currentusername = \Auth::user()->name;
 
-        $id = DB::select("Select rou_id from rou ORDER BY rou_id LIMIT 1");
+        $routines = DB::select('select * from rou where rou_name = ? limit 1', [$routinename]);
+        foreach($routines as $routine)
+        {
+            $routineid = $routine->rou_id;
+        }
 
-        DB::insert('insert into workout(workout_date, workout_difficulty, workout_type, workout_num_ex, workout_length, workout_rou_id, workout_comment, workout_username) values(?, ?, ?, ?, ?, ?, ?, ?)',
-        [$date, $difficulty, $type, $numex, $length, '2', $comment, $currentusername]);
-        return view('workouts.viewworkouts');
+        if(isset($routineid)){
+            DB::insert('insert into workout(workout_date, workout_difficulty, workout_type, workout_num_ex, workout_length, workout_rou_id, workout_comment, workout_username) values(?, ?, ?, ?, ?, ?, ?, ?)',
+        [$date, $difficulty, $type, $numex, $length, $routineid, $comment, $currentusername]);
+        }
+        
+        $workouts = DB::select('select * from workout where workout_username = ?', [\Auth::user()->name]);
+        return view('workouts/viewworkouts', ['workouts' => $workouts]);
     }
 }

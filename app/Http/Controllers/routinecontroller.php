@@ -25,7 +25,8 @@ class routinecontroller extends Controller
      */
     public function index()
     {
-        return view('home');
+        $routines = DB::select('select * from rou where rou_username = ?', [\Auth::user()->name]);
+        return view('Routines.viewroutines', ['routines' => $routines]);
     }
 
     public function fill(){
@@ -33,7 +34,7 @@ class routinecontroller extends Controller
         $length = request('Length');
         $difficulty = request('difficulty');
         $goal = request('goal');
-        $split = request('split');
+        $split = request('Split');
         $comment = request("comment");
 
         $currentusername = \Auth::user()->name;
@@ -41,7 +42,8 @@ class routinecontroller extends Controller
         {
             DB::insert('insert into rou(rou_difficulty, rou_name, rou_goal, rou_length, rou_split, rou_username) values(?, ?, ?, ?, ?, ?)',
             [$difficulty, $name, $goal, $length, $split, $currentusername]);
-            return view('Routines.viewroutines');
+            $routines = DB::select('select * from rou where rou_username = ?', [\Auth::user()->name]);
+        return view('Routines.viewroutines', ['routines' => $routines]);
         }
     }
 }

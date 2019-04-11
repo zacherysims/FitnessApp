@@ -19,7 +19,7 @@ Add Workout
   Difficulty:<br>
   <select name= "difficulty">
   <option value="" selected disabled hidden></option>
-  <option value="Beginner">Beginner</option>
+  <option value="Begginer">Begginer</option>
   <option value="Intermediate">Intermediate</option>
   <option value="Advanced">Advanced</option>
 </select><br><br>
@@ -36,7 +36,9 @@ Type:<br>
   <input type="number" name="length_hours" min = "1" max = "10" placeholder = "Hours">
   <input type="number" name="length_minutes" min = "1" max = "59" placeholder = "Minutes"><br><br>
   Comment:<br>
-  <textarea name="Comment"></textarea><br><br>
+  <textarea name="comment"></textarea><br><br>
+  Associated Routine:<br>
+  <textarea name="routinename"></textarea><br><br>
 <input type="submit" value="Add Workout">
 </form>
 @endsection

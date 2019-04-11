@@ -30,9 +30,7 @@ Route::get('/addworkout', function () {
     return view('workouts/addworkout');
 });
 
-Route::get('/viewroutines', function () {
-    return view('Routines/viewroutines');
-});
+Route::get('/viewroutines', 'routinecontroller@index');
 
 Route::get('/addroutine', function () {
     return view('Routines/addroutine');
@@ -75,4 +73,16 @@ Route::post('/fill_addroutine', 'routinecontroller@fill');
 
 Route::get('/filloutform', function () {
     return view('filloutform');
+});
+
+Route::get('/fillexercise', function () {
+    return view('workouts/addexercise');
+});
+
+Route::get('/fillexerciseform', 'exercisecontroller@fill');
+Route::get('/viewexercises', 'exercisecontroller@index');
+Route::get('/viewsets', 'setcontroller@index');
+Route::get('/fillsetform', 'setcontroller@fill');
+Route::get('/fillset', function () {
+    return view('workouts/addset');
 });

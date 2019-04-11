@@ -25,29 +25,30 @@ class exercisecontroller extends Controller
      */
     public function index()
     {
-        return view('home');
+        $exercises = DB::select('select * from exercise where exercise_creator_username = ?', [\Auth::user()->name]);
+        return view('workouts/viewexercises', ['exercises' => $exercises]);
     }
 
     public function fill(){
         $username = \Auth::user()->name;
         $name = request('name');
         $type = request('type');
-        $date = request('date');
-        $difficulty
+        $numsets = request('numsets');
+        $comment = request('comment');
+        $workout = request('workout');
 
-        $currentuser = DB::select('select * from personnel where username = ?', [$username]);
-        foreach($currentuser as $observeduser){
-             echo "<script type='tex/javascript'>Sorry, that username is taken</script>";
-             return view('filloutform');
-    }
 
+        $workouts = DB::select('select * from workout where workout_id = ? limit 1', [$workout]);
+        foreach($workouts as $workout)
         {
-            DB::insert('insert into personnel(username, password, weight, goal_weight, training_goal, height, age) values(?, ?, ?, ?, ?, ?, ?)',
-            [$username, \Auth::user()->password, $weight, $goalweight, $traininggoal, $height, $age]);
-
-            DB::insert('insert into rou(rou_difficulty, rou_name, rou_goal, rou_length, rou_split) values(?, ?, ?, ?, ?)',
-            ['Beginner', $username, 'Maintain', '1', '1']);
-            return view('welcome');
+            $workoutid = $workout->workout_id;
         }
+
+        if(isset($workoutid)){
+            DB::insert('insert into exercise(exercise_name, exercise_type, exercise_num_sets, exercise_workout_id, exercise_comment, exercise_creator_username, exercise_user_username) values(?, ?, ?, ?, ?, ?, ?)', 
+            [$name, $type, $numsets, $workoutid, $comment, $username, $username]);
+        }
+        $exercises = DB::select('select * from exercise where exercise_creator_username = ?', [\Auth::user()->name]);
+        return view('workouts/viewexercises', ['exercises' => $exercises]);
     }
 }
