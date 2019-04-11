@@ -45,6 +45,9 @@ class personellcontroller extends Controller
         {
             DB::insert('insert into personnel(username, password, weight, goal_weight, training_goal, height, age) values(?, ?, ?, ?, ?, ?, ?)',
             [$username, \Auth::user()->password, $weight, $goalweight, $traininggoal, $height, $age]);
+
+            DB::insert('insert into rou(rou_difficulty, rou_name, rou_goal, rou_length, rou_split) values(?, ?, ?, ?, ?)',
+            ['Beginner', $username, 'Maintain', '1', '1']);
             return view('welcome');
         }
     }
