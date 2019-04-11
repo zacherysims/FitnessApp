@@ -23,9 +23,7 @@ Route::get('/viewworkouts', function () {
     return view('workouts/viewworkouts');
 });
 
-Route::get('/adddiet', function () {
-    return view('Diets/adddiet');
-});
+Route::get('/adddiet', 'dietcontroller@adddiet');
 
 Route::get('/test', function () {
     return view('Diets/test');
@@ -71,3 +69,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/formfill', 'personellcontroller@fill');
+
+Route::get('/filloutform', function () {
+    return view('filloutform');
+});
