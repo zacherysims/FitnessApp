@@ -1,14 +1,19 @@
 @extends('masterlayout')
 @section('title')
-    You gonna cry?
+    Diets
 @endsection
 @section('tab')
 Add a Diet
 @endsection
 @section('content')
 
+<<<<<<< HEAD
 <h1>Add a diet maybe?</h1>
 <form action="/adddiet">
+=======
+<h1>Add a Diet</h1>
+<form action="adddiet">
+>>>>>>> 5b1de6cf27804291d89da753ecc105032b1919d4
   Name:<br>
   <input type="text" name="name"><br><br>
   Length(Days):<br>

@@ -1,15 +1,15 @@
 @extends('masterlayout')
 
 @section('title')
-    You gonna cry?
+    Exercises
 @endsection
 
 @section('tab')
-Add an Exercise
+Add Exercise
 @endsection
 
 @section('content')
-<h1>Add an exercise maybe?</h1>
+<h1>Add and Exercise</h1>
 <form action="addexercise">
     Name:<br>
   <input type="text" name="Name"><br><br>

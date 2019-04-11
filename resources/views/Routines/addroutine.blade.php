@@ -1,13 +1,13 @@
 @extends('masterlayout')
 
 @section('title')
-    You gonna cry?
+    Routines
 @endsection
 @section('tab')
 Add a Routine
 @endsection
 @section('content')
-<h1>Add a routine maybe?</h1>
+<h1>Add a Routine</h1>
 <form action="addroutine">
   Name:<br>
   <input type="text" name="Name"><br><br>

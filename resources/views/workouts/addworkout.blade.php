@@ -1,16 +1,15 @@
 @extends('masterlayout')
 
 @section('title')
-    You gonna cry?
+    Workouts
 @endsection
+
 @section('tab')
-Add a Workout
+Add Workout
 @endsection
-@section('tab')
-Add a Workout
-@endsection
+
 @section('content')
-<h1>Add a workout maybe?</h1>
+<h1>Add a Workout</h1>
 <form action="addworkout">
   Date:<br>
   <input type="text" name="input" placeholder="YYYY-MM-DD" required 
