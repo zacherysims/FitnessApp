@@ -24,7 +24,8 @@ class dietcontroller extends Controller
 
     public function index()
     {
-        return view('viewdiets');
+        $diets = DB::select('select * from diet where diet_username = ?', [\Auth::user()->name]);
+        return view('diets/viewdiets', ['diets' => $diets]);
     }
 
     public function fill(){
@@ -37,7 +38,8 @@ class dietcontroller extends Controller
 
         DB::insert('insert into diet (diet_username, diet_difficulty, diet_length, diet_goal, diet_name) values(?, ?, ?, ?, ?)',
         [$currentusername, $difficulty, $length, $goal, $name]);
-        return view('diets/viewdiets');
+        $diets = DB::select('select * from diet where diet_username = ?', [\Auth::user()->name]);
+        return view('diets/viewdiets', ['diets' => $diets]);
         
     }
 }

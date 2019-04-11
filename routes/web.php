@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/viewdiets', function () {
-    return view('Diets/viewdiets');
-});
+Route::get('/viewdiets', 'dietcontroller@index');
 
 Route::get('/viewworkouts', function () {
     return view('workouts/viewworkouts');
